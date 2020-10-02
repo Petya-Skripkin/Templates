@@ -8,7 +8,6 @@ export const Content = styled.div`
   align-items: center;
   height: 80px;
   padding-top: 44px;
-  color: ${colors.gray};
   background-color: ${colors.lightBlack};
 `;
 
@@ -21,20 +20,21 @@ export const List = styled.ul`
 `;
 
 export const Link = styled.a`
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 20px;
-    text-decoration: none;
-    cursor: pointer;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  text-decoration: none;
+  color: ${colors.gray};
+  cursor: pointer;
 
-    & > li {
-        display: inline;
-    }
+  & > li {
+    display: inline;
+  }
 
-    &:hover {
-      color: white;
-      background-color: ${colors.toLightBlack};
-    }
+  &:hover {
+    color: white;
+    background-color: ${colors.toLightBlack};
+  }
 `;

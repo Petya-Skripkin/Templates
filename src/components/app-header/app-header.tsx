@@ -2,14 +2,24 @@ import React from 'react';
 
 import * as Styles from './styles';
 
-const AppHeader = () => {
+interface IMenu {
+    title: string;
+    link: string;
+}
+
+interface IProps {
+    logo: string;
+    menu: IMenu[];
+}
+
+const AppHeader = ({ logo, menu }: IProps) => {
     return (
         <Styles.Content>
-            <img src="porten.svg" alt=""/>
+            <img src={logo} alt="" />
             <Styles.List>
-                <Styles.Link><li>Понравилось</li></Styles.Link>
-                <Styles.Link><li>личный кабинет</li></Styles.Link>
-                <Styles.Link><li>настройки</li></Styles.Link>
+                {menu.map(item => (
+                    <Styles.Link href={item.link}><li>{item.title}</li></Styles.Link>
+                ))}
             </Styles.List>
         </Styles.Content>
     )
