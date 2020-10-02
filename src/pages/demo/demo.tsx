@@ -6,6 +6,7 @@ import * as Styles from './styles';
 const Demo = () => {
     return (
         <Styles.Conteiner>
+            <Components.TopLine />
             <Components.AppHeader />
         </Styles.Conteiner>
     )
