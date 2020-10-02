@@ -2,10 +2,14 @@ import React from 'react';
 
 import * as Styles from './styles';
 
-const Heading = () => {
+interface ITitle {
+  title: string;
+}
+
+const Heading = ({title}: ITitle) => {
   return (
     <Styles.Content>
-      СЕЗОН 2020/21
+      {title}
       <Styles.Line/>
     </Styles.Content>
   )
