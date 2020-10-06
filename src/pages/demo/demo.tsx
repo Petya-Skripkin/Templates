@@ -36,6 +36,12 @@ const Demo = () => {
         title= "Louis XVI ATHOS"
         price= "165 000 руб."
       />
+      <Components.ImagBlock
+        imag= "./bg.svg"
+        title= "новая коллекция"
+        button= "каталог"
+        onClick= {() => console.log("hello")}
+      />
     </Styles.Conteiner>
   )
 }
