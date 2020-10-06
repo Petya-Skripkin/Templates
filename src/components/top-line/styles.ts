@@ -11,6 +11,7 @@ export const Content = styled.div`
   height: 44px;
   color: ${colors.gray};
   background-color: ${colors.black};
+  z-index: 10;
 
   & > p {
     position: relative;
