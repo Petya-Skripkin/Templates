@@ -2,9 +2,11 @@ import styled from "styled-components";
 
 export const Content = styled.div<{ img: string }>`
   position: relative;
-  width: 55%;
-  height: 580px;
+  width: 48%;
+  height: 530px;
   background: url(${({ img }) => img});
+  background-repeat: no-repeat;
+  background-size: 100%;
   filter: saturate(0);
   margin-bottom: 100px;
 
@@ -32,9 +34,12 @@ export const Content = styled.div<{ img: string }>`
 
   &:hover {
     background: url(${({ img }) => img});
+    background-size: 100%;
+    background-repeat: no-repeat;
     filter: none;
 
-    & > p, input {
+    & > p,
+    input {
       display: inline-block;
     }
   }

@@ -3,7 +3,7 @@ import React from 'react';
 import * as Styles from './styles';
 
 interface ITitle {
-  title: string;
+  title?: string;
 }
 
 const Heading = ({title}: ITitle) => {

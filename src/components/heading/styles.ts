@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Content = styled.div`
-  width: 376px;
+  min-width: 376px;
   font-size: 36px;
   text-align: center;
   text-transform: uppercase;
