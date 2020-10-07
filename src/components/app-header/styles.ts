@@ -7,11 +7,14 @@ export const Content = styled.div`
   justify-content: space-around;
   align-items: center;
   height: 80px;
-  padding-top: 44px;
   background-color: ${colors.lightBlack};
+
+  @media(max-width: 1125px) {
+    height: 40px;
+  }
 `;
 
-export const List = styled.ul`
+export const Menu = styled.ul`
   display: flex;
   align-items: center;
   height: 100%;
@@ -20,21 +23,21 @@ export const List = styled.ul`
 `;
 
 export const Link = styled.a`
-  height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  height: 100%;
   padding: 0 20px;
+  align-items: center;
   text-decoration: none;
   color: ${colors.gray};
   cursor: pointer;
-
-  & > li {
-    display: inline;
-  }
 
   &:hover {
     color: white;
     background-color: ${colors.toLightBlack};
   }
+`;
+
+export const List = styled.li`
+  display: inline;
 `;

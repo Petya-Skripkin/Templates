@@ -19,16 +19,16 @@ const Main = () => (
 
     <Styles.Conteiner>
       <Styles.FlexContent>
-        <Components.Heading
-          title="СЕЗОН 2020/21"
-        />
+        <Components.Title>СЕЗОН 2020/21</Components.Title>
         <Styles.Flex>
           {MOCK.map(item => (
-            <Components.Block
-              imag={item.imag}
-              title={item.title}
-              price={item.price}
-            />
+            <Styles.StyleBlock>
+              <Components.Block
+                imag={item.imag}
+                title={item.title}
+                price={item.price}
+              />
+            </Styles.StyleBlock>
           ))}
         </Styles.Flex>
       </Styles.FlexContent>
@@ -40,48 +40,42 @@ const Main = () => (
       />
     </Styles.Conteiner>
 
-    <Styles.Conteiner>
+    <Styles.ConteinerReverse>
       <Components.ImagBlock
         imag="./bg1.svg"
       />
       <Styles.FlexContent>
-        <Components.Heading
-          title="коллекция 2018"
-        />
+        <Components.Title>коллекция 2018</Components.Title>
         <Styles.Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non rutrum ornare ut mattis habitant dui arcu. Sagittis amet nunc ut neque quis nibh arcu. Vivamus vestibulum nisi et venenatis sed scelerisque magna consectetur. Amet convallis quis gravida facilisis vulputate. Faucibus facilisi habitasse ipsum interdum dictum aliquet. Velit quis ullamcorper pulvinar nulla malesuada integer. Aenean praesent viverra nulla nullam natoque volutpat curabitur auctor. Viverra viverra ullamcorper scelerisque risus dignissim egestas. Id aliquam a aliquam egestas leo orci pharetra sed diam. </Styles.Text>
         <Styles.Buttom type='button' value='посмотреть коллекцию' />
       </Styles.FlexContent>
-    </Styles.Conteiner>
+    </Styles.ConteinerReverse>
 
     <Styles.FlexContent>
-      <Components.Heading
-        title="новые поступления"
-      />
+      <Components.Title>новые поступления</Components.Title>
       <Styles.NewArrivals>
         {LAST__MOCK.map(item => (
-          <Components.Block
-            imag={item.imag}
-            title={item.title}
-            price={item.price}
-          />
+          <Styles.StyleBlock>
+            <Components.Block
+              imag={item.imag}
+              title={item.title}
+              price={item.price}
+            />
+          </Styles.StyleBlock>
         ))}
       </Styles.NewArrivals>
     </Styles.FlexContent>
 
     <Styles.Brands>
-      <Components.Heading
-        title="новые поступления"
-      />
-      <div>
+      <Components.Title>новые поступления</Components.Title>
+      <Styles.BrandsImage>
         {BRANDS.map(item => (
           <img src={item.imag} alt='' />
         ))}
-      </div>
+      </Styles.BrandsImage>
     </Styles.Brands>
-    <div>
-      <p>© 2020 Все права защищены</p>
-      <a href="#">Сделано Figma.info</a>
-    </div>
+
+    <Components.Footer />
   </Styles.Content>
 )
 
