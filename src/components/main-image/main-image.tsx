@@ -10,8 +10,8 @@ interface IProps {
 const MainImage = ({ imag, text }: IProps) => {
   return (
     <Styles.Content>
-      <img src={imag} alt="" />
-      <p>{text}</p>
+      <Styles.Image src={imag} alt=" "/>
+      <Styles.Text>{text}</Styles.Text>
     </Styles.Content>
   )
 }

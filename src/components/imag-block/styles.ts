@@ -1,36 +1,41 @@
 import styled from "styled-components";
 
+export const Title = styled.p`
+  position: absolute;
+  top: 45%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+`;
+
+export const Botton = styled.input`
+  position: absolute;
+  top: 75%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+  padding: 11px 22px;
+  border: 1px solid white;
+  font-size: 16px;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  outline: none;
+  cursor: pointer;
+`;
+
 export const Content = styled.div<{ img: string }>`
   position: relative;
-  width: 48%;
+  width: 100%;
   height: 530px;
   background: url(${({ img }) => img});
   background-repeat: no-repeat;
   background-size: 100%;
   filter: saturate(0);
-  margin-bottom: 100px;
-
-  & > p {
-    display: none;
-    position: absolute;
-    top: 55%;
-    left: 22%;
-  }
-
-  & > input {
-    display: none;
-    position: absolute;
-    top: 75%;
-    left: 39.5%;
-    color: white;
-    background: rgba(0, 0, 0, 0);
-    padding: 11px 22px;
-    outline: none;
-    font-size: 16px;
-    text-transform: uppercase;
-    border: 1px solid white;
-    cursor: pointer;
-  }
 
   &:hover {
     background: url(${({ img }) => img});
@@ -38,8 +43,7 @@ export const Content = styled.div<{ img: string }>`
     background-repeat: no-repeat;
     filter: none;
 
-    & > p,
-    input {
+    ${Title},${Botton} {
       display: inline-block;
     }
   }

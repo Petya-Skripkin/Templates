@@ -16,11 +16,11 @@ const AppHeader = ({ logo, menu }: IProps) => {
     return (
         <Styles.Content>
             <img src={logo} alt="" />
-            <Styles.List>
+            <Styles.Menu>
                 {menu.map(item => (
-                    <Styles.Link href={item.link}><li>{item.title}</li></Styles.Link>
+                    <Styles.Link href={item.link}><Styles.List>{item.title}</Styles.List></Styles.Link>
                 ))}
-            </Styles.List>
+            </Styles.Menu>
         </Styles.Content>
     )
 }

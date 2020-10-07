@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Heading from './../heading';
+import Title from '../styles';
 import * as Styles from './styles';
 
 interface IProps {
@@ -15,12 +15,10 @@ const ImagBlock = ({ imag, title, button, onClick }: IProps) => {
     <Styles.Content img={imag}>
       {(title && button) &&
         <>
-          <p>
-            <Heading
-              title={title}
-            />
-          </p>
-          <input type='button' value={button} onClick={onClick} />
+          <Styles.Title>
+            <Title>{title}</Title>
+          </Styles.Title>
+          <Styles.Botton type='button' value={button} onClick={onClick} />
         </>
       }
     </Styles.Content>
